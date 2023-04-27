@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function TransactionHistory({ items }) {
   return (
     <table className="transaction-history">
@@ -18,17 +20,17 @@ export default function TransactionHistory({ items }) {
         ))}
       </tbody>
     </table>
-
-    //   <section className="statistics">
-    //     {title && <h2 className="title">{title}</h2>}
-    //     <ul className="stat-list">
-    //   {stats.map(({ id, label, percentage }) => (
-    //     <li className="item" key={id}>
-    //       <span className="label">{label}</span>
-    //       <span className="percentage">{percentage}</span>
-    //     </li>
-    //   ))}
-    //     </ul>
-    //   </section>
   );
-}
+};
+
+TransactionHistory.propTypes = {
+    items: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            type: PropTypes.string.isRequired,
+            amount: PropTypes.string.isRequired,
+            currency: PropTypes.string.isRequired
+        }).isRequired
+      
+    ).isRequired
+  };
