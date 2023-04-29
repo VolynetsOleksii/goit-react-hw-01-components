@@ -4,8 +4,7 @@ import {
   UserImg,
   CardContainer,
   Name,
-  Tag,
-  Location,
+  Paragraph,
   List,
   Li,
   TextSpan,
@@ -23,8 +22,8 @@ export default function Profile({
       <CardContainer>
         <UserImg src={avatar} alt="user avatar" className="avatar" />
         <Name>{username}</Name>
-        <Tag>@{tag}</Tag>
-        <Location>{location}</Location>
+        <Paragraph>@{tag}</Paragraph>
+        <Paragraph>{location}</Paragraph>
       </CardContainer>
 
       <List>

@@ -30,13 +30,7 @@ export const Name = styled.p`
   font-weight: bold;
 `;
 
-export const Tag = styled.p`
-  margin-top: 0px;
-  color: ${props => props.theme.colors.gray};
-  font-size: 18px;
-`;
-
-export const Location = styled.p`
+export const Paragraph = styled.p`
   margin-top: 0px;
   color: ${props => props.theme.colors.gray};
   font-size: 18px;
