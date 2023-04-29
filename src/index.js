@@ -1,20 +1,24 @@
 // import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from 'components/App';
-import './index.css';
-// import user from './components/Profile/user.json';
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
+import { ThemeProvider } from 'styled-components';
 
-
-// const elem1 = <span>Hello</span>;
-// const elem2 = <span>World</span>;
-// const element = <div>{elem1} {elem2}</div>;
+const theme = {
+  colors: {
+    text: '#212121',
+    black: '#000',
+    white: '#fff',
+    gray: '#707070',
+    lightGray: '#f3f4f3',
+    accent: 'tomato',
+    green: 'green',
+    red: 'orangeRed',
+    lightBlue: '#14acdf',
+  },
+};
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <App
-  />
+  <ThemeProvider theme={theme}>
+    <App />
+  </ThemeProvider>
 );

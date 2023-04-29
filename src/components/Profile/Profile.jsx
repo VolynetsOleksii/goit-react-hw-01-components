@@ -1,5 +1,16 @@
 import PropTypes from 'prop-types';
-
+import {
+  ProfileCard,
+  UserImg,
+  CardContainer,
+  Name,
+  Tag,
+  Location,
+  List,
+  Li,
+  TextSpan,
+  NumberSpan,
+} from "./Profile.styled.jsx";
 export default function Profile({
   avatar,
   username,
@@ -8,29 +19,29 @@ export default function Profile({
   stats: { followers, views, likes },
 }) {
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt="user avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">{tag}</p>
-        <p className="location">{location}</p>
-      </div>
+    <ProfileCard>
+      <CardContainer>
+        <UserImg src={avatar} alt="user avatar" className="avatar" />
+        <Name>{username}</Name>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </CardContainer>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
-        </li>
-      </ul>
-    </div>
+      <List>
+        <Li>
+          <TextSpan>Followers</TextSpan>
+          <NumberSpan>{followers}</NumberSpan>
+        </Li>
+        <Li>
+          <TextSpan>Views</TextSpan>
+          <NumberSpan>{views}</NumberSpan>
+        </Li>
+        <Li>
+          <TextSpan>Likes</TextSpan>
+          <NumberSpan>{likes}</NumberSpan>
+        </Li>
+      </List>
+    </ProfileCard>
   );
 };
 
