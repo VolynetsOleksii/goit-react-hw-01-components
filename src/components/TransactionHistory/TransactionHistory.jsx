@@ -1,36 +1,41 @@
 import PropTypes from 'prop-types';
+import {
+  Table,
+  TableHead,
+  TableBody,
+  TableRow,
+} from './TransactionHistory.styled';
 
 export default function TransactionHistory({ items }) {
   return (
-    <table className="transaction-history">
-      <thead>
+    <Table>
+      <TableHead>
         <tr>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
         </tr>
-      </thead>
-      <tbody>
-        {items.map(({ id, type, amount, currency }) => (
-          <tr key={id}>
+      </TableHead>
+      <TableBody>
+        {items.map(({ id, type, amount, currency }, index) => (
+          <TableRow even={index % 2 === 0} key={id}>
             <td>{type}</td>
             <td>{amount}</td>
             <td>{currency}</td>
-          </tr>
+          </TableRow>
         ))}
-      </tbody>
-    </table>
+      </TableBody>
+    </Table>
   );
-};
+}
 
 TransactionHistory.propTypes = {
-    items: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            type: PropTypes.string.isRequired,
-            amount: PropTypes.string.isRequired,
-            currency: PropTypes.string.isRequired
-        }).isRequired
-      
-    ).isRequired
-  };
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
+};

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ProfileCard = styled.div`
   border-radius: 5px;
@@ -7,7 +7,7 @@ export const ProfileCard = styled.div`
   margin: 0 auto 80px;
   margin-top: 20px;
   background-color: ${props => props.theme.colors.white};
-  box-shadow: 0px 3px 20px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: ${props => props.theme.shadows.shadow};
 `;
 
 export const UserImg = styled.img`
@@ -38,7 +38,7 @@ export const Paragraph = styled.p`
 
 export const List = styled.ul`
   list-style: none;
-  padding: 0 10px 10px;
+  padding: 5px 10px 5px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -47,13 +47,14 @@ export const List = styled.ul`
 `;
 
 export const Li = styled.li`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: calc(33.3333% - 3px);
-    :not(:first-child) {
-      border-left: 1px solid #e1e1e1;
-    `;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(33.3333% - 3px);
+  :not(:first-child) {
+    border-left: 1px solid ${props => props.theme.colors.gray};
+  }
+`;
 
 export const TextSpan = styled.span`
   margin-bottom: 5px;

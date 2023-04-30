@@ -6,7 +6,7 @@ export const StatSection = styled.section`
   border-radius: 5px;
   overflow: hidden;
   margin: 0 auto 50px;
-  box-shadow: 0px 3px 20px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: ${props => props.theme.shadows.shadow};
 `;
 
 export const Title = styled.h2`
