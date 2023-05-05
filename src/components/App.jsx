@@ -6,6 +6,7 @@ import FriendList from "./FriendList/FriendList";
 import friends from "./FriendList/friends.json"
 import TransactionHistory from "./TransactionHistory/TransactionHistory";
 import transactions from "./TransactionHistory/transactions.json"
+import { GlobalStyle } from "./GlobalStyle";
 export const App = () => {
   return (
     <div>
@@ -22,6 +23,7 @@ export const App = () => {
      />
      <FriendList friends={friends}/>
      <TransactionHistory items={transactions} />
+     <GlobalStyle/>
     </div>
   );
 };

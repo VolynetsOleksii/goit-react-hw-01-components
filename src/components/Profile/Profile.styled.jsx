@@ -25,13 +25,13 @@ export const CardContainer = styled.div`
 `;
 
 export const Name = styled.p`
-  margin-top: 0px;
+  margin-bottom: 10px;
   font-size: 24px;
   font-weight: bold;
 `;
 
 export const Paragraph = styled.p`
-  margin-top: 0px;
+  margin-bottom: 10px;
   color: ${props => props.theme.colors.gray};
   font-size: 18px;
 `;
@@ -42,7 +42,6 @@ export const List = styled.ul`
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  height: 50px;
   background-color: ${props => props.theme.colors.lightGray};
 `;
 

@@ -31,9 +31,7 @@ export const ListItem = styled.li`
   flex-direction: column;
   color: ${props => props.theme.colors.white};
   background-color: ${() => getRandomHexColor()};
-  width: 50px;
   padding: 10px;
-  height: 40px;
   text-align: center;
 `;
 
